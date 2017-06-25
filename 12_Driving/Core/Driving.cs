@@ -216,7 +216,7 @@ namespace Fusee.Tutorial.Core
             float posVel = Keyboard.WSAxis * Time.DeltaTime;
             float rotVel = Keyboard.ADAxis * Time.DeltaTime;
 
-            float newRot = _BaseTransform.Rotation.y + (rotVel * Keyboard.WSAxis * Time.DeltaTime * 20);
+            float newRot = _BaseTransform.Rotation.y + (rotVel * Keyboard.WSAxis * Time.DeltaTime * 30);
             _BaseTransform.Rotation = new float3(0, newRot, 0);
 
             float3 pAneu = _BaseTransform.Translation + new float3(posVel * M.Sin(newRot) * 10, 0, posVel * M.Cos(newRot) * 10);
